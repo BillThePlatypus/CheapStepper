@@ -69,6 +69,8 @@ public:
 	void stop();
 	void off();
 
+	inline bool is_moving{ stepsLeft != 0 };
+
 	void newMoveCW(int numSteps) { newMove(true, numSteps); }
 	void newMoveCCW(int numSteps) { newMove(false, numSteps); }
 	void newMoveToCW(int toStep) { newMoveTo(true, toStep); }
